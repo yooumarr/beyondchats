@@ -24,7 +24,7 @@ This repository implements an automated real-time evaluation system for AI chatb
    ```
 
 4. Set up environment variables
-   - Create a `.env` file in the project root:
+   Create a `.env` file in the project root:
      ```env
      GEMINI_API_KEY=your_gemini_api_key_here
      ```
@@ -74,16 +74,11 @@ Both evaluators enforce JSON-formatted outputs using Gemini’s `response_mime_t
    - Enables targeted prompt engineering and clearer failure diagnosis
    - Avoids conflating different evaluation dimensions
 
-3. Standard JSON parser (not JSON5)  
+3. Standard JSON parser 
    - Enforces production-grade data standards
-   - Real-world systems emit valid JSON, not developer-friendly variants
    - Avoids unnecessary dependencies that could break in minimal environments
 
-4. Token-based cost estimation  
-   - Provides realistic cost proxy without requiring actual billing APIs
-   - Enables cost-aware evaluation decisions at scale
-
-5. Human-aligned prompt design  
+4. Clear prompt design  
    - Structured instructions with clear scoring rubrics
    - Enforces JSON output format for reliable parsing
    - Includes concise reasoning for interpretability
